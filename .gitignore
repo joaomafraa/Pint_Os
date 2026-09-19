@@ -1,0 +1,18 @@
+# Ferramentas, downloads, logs e backups locais
+/toolchain/
+
+# Compilação do Pintos
+**/build/
+*.o
+*.d
+*.dsk
+/pintos/src/utils/setitimer-helper
+/pintos/src/utils/squish-pty
+/pintos/src/utils/squish-unix
+
+#arquivos temporários do editor e do sistema
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
