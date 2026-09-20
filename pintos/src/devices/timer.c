@@ -104,8 +104,9 @@ timer_elapsed (int64_t then)
 /* Sleeps for approximately TICKS timer ticks.  Interrupts must
    be turned on. */
 void
-timer_sleep (int64_t ticks) 
+timer_sleep (int64_t duration) 
 {
+  if (duration <= 0) return;
   struct sleep_waiter waiter;
   enum intr_level old_level;
   ASSERT (intr_get_level () == INTR_ON);
@@ -113,7 +114,7 @@ timer_sleep (int64_t ticks)
 
   old_level = intr_disable ();
 
-  waiter.wake_tick = ticks;
+  waiter.wake_tick = ticks + duration;
   list_insert_ordered (&sleep_list, &waiter.elem,wake_before, NULL);
   sema_down (&waiter.semaphore);
   intr_set_level (old_level);
