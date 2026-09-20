@@ -25,7 +25,16 @@ struct sleep_waiter{//thread para esperar o alarme
     struct semaphore semaphore;//bloquear a thread enquanto ela espera
     struct list_elem elem;//conecta a lista do pint os
   };
-  static struct list sleep_list;//lista com oas alarmes pendentes
+static struct list sleep_list;//lista com oas alarmes pendentes
+
+//vai retornar true se o primeiro alarme vence antes do segundo
+static bool wake_before (const struct list_elem *a,const struct list_elem *b,void *aux UNUSED){//comparacao dos pintos mas nn se usa
+                                    //list entry recupera o registro completo 
+  const struct sleep_waiter *first=list_entry (a, struct sleep_waiter, elem); //primeiro
+  const struct sleep_waiter *second=list_entry(b, struct sleep_waiter, elem);//segundo
+
+  return first->wake_tick < second->wake_tick;
+}
 
 /* Number of loops per timer tick.
    Initialized by timer_calibrate(). */
