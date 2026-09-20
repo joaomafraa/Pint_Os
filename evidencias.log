@@ -76,4 +76,110 @@ PASS
   while (timer_elapsed (start) < ticks) 
     thread_yield ();
 }
-[?2004h]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;
+[?2004h]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [7mcd /mnt/c/SO/Pint_Os[27m
+[7msource env.sh[27m
+[7mmake -C pintos/src/threads[27m[A[A]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ cd /mnt/c/SO/Pint_Os
+source env.sh
+make -C pintos/src/threads
+[?2004lmake: Entering directory '/mnt/c/SO/Pint_Os/pintos/src/threads'
+cd build && make all
+make[1]: Entering directory '/mnt/c/SO/Pint_Os/pintos/src/threads/build'
+i386-elf-gcc -c ../../devices/timer.c -o devices/timer.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF devices/timer.d
+i386-elf-ld -melf_i386 -T threads/kernel.lds.s -o kernel.o threads/start.o threads/init.o threads/thread.o threads/switch.o threads/interrupt.o threads/intr-stubs.o threads/synch.o threads/palloc.o threads/malloc.o devices/pit.o devices/timer.o devices/kbd.o devices/vga.o devices/serial.o devices/block.o devices/partition.o devices/ide.o devices/input.o devices/intq.o devices/rtc.o devices/shutdown.o devices/speaker.o lib/debug.o lib/random.o lib/stdio.o lib/stdlib.o lib/string.o lib/arithmetic.o lib/ustar.o lib/kernel/debug.o lib/kernel/list.o lib/kernel/bitmap.o lib/kernel/hash.o lib/kernel/console.o tests/threads/tests.o tests/threads/alarm-wait.o tests/threads/alarm-simultaneous.o tests/threads/alarm-priority.o tests/threads/alarm-zero.o tests/threads/alarm-negative.o tests/threads/priority-change.o tests/threads/priority-donate-one.o tests/threads/priority-donate-multiple.o tests/threads/priority-donate-multiple2.o tests/threads/priority-donate-nest.o tests/threads/priority-donate-sema.o tests/threads/priority-donate-lower.o tests/threads/priority-fifo.o tests/threads/priority-preempt.o tests/threads/priority-sema.o tests/threads/priority-condvar.o tests/threads/priority-donate-chain.o tests/threads/mlfqs-load-1.o tests/threads/mlfqs-load-60.o tests/threads/mlfqs-load-avg.o tests/threads/mlfqs-recent-1.o tests/threads/mlfqs-fair.o tests/threads/mlfqs-block.o
+i386-elf-objdump -S kernel.o > kernel.asm
+i386-elf-nm -n kernel.o > kernel.sym
+i386-elf-objcopy -R .note -R .comment -S kernel.o kernel.bin
+make[1]: Leaving directory '/mnt/c/SO/Pint_Os/pintos/src/threads/build'
+make: Leaving directory '/mnt/c/SO/Pint_Os/pintos/src/threads'
+[?2004h]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [K]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [7mmake -C pintos/src/threads/build \[27m
+[7m  tests/threads/alarm-single.result \[27m
+[7m  tests/threads/alarm-multiple.result \[27m
+[7m  tests/threads/alarm-simultaneous.result \[27m
+[7m  tests/threads/alarm-zero.result \[27m
+[7m  tests/threads/alarm-negative.result[27m[A[A[A[A[Amake -C pintos/src/threads/build \
+  tests/threads/alarm-single.result \
+  tests/threads/alarm-multiple.result \
+  tests/threads/alarm-simultaneous.result \
+  tests/threads/alarm-zero.result \
+  tests/threads/alarm-negative.result
+[?2004lmake: Entering directory '/mnt/c/SO/Pint_Os/pintos/src/threads/build'
+pintos -v -k -T 60 --qemu  -- -q  run alarm-single < /dev/null 2> tests/threads/alarm-single.errors > tests/threads/alarm-single.output
+perl -I../.. ../../tests/threads/alarm-single.ck tests/threads/alarm-single tests/threads/alarm-single.result
+[32mpass tests/threads/alarm-single
+[0mpintos -v -k -T 60 --qemu  -- -q  run alarm-multiple < /dev/null 2> tests/threads/alarm-multiple.errors > tests/threads/alarm-multiple.output
+perl -I../.. ../../tests/threads/alarm-multiple.ck tests/threads/alarm-multiple tests/threads/alarm-multiple.result
+[31mFAIL tests/threads/alarm-multiple
+[0mKernel panic in run: PANIC at ../../tests/threads/tests.c:93 in fail(): test failed
+Call stack: 0xc0029699 0xc002ba6a 0xc002bd62 0xc002bab3 0xc002b991 0xc0020786 0xc0020864 0xc0020362
+Translation of call stack:
+0xc0029699: debug_panic (.../../lib/kernel/debug.c:38)
+0xc002ba6a: pass (.../tests/threads/tests.c:99)
+0xc002bd62: test_sleep (.../threads/alarm-wait.c:121)
+0xc002bab3: test_alarm_multiple (...s/threads/alarm-wait.c:24)
+0xc002b991: run_test (.../tests/threads/tests.c:57)
+0xc0020786: run_task (.../../../threads/init.c:294)
+0xc0020864: run_actions (.../../../threads/init.c:344)
+0xc0020362: pintos_init (.../../../threads/init.c:134)
+pintos -v -k -T 60 --qemu  -- -q  run alarm-simultaneous < /dev/null 2> tests/threads/alarm-simultaneous.errors > tests/threads/alarm-simultaneous.output
+perl -I../.. ../../tests/threads/alarm-simultaneous.ck tests/threads/alarm-simultaneous tests/threads/alarm-simultaneous.result
+[31mFAIL tests/threads/alarm-simultaneous
+[0mTest output failed to match any acceptable form.
+
+Acceptable output:
+  (alarm-simultaneous) begin
+  (alarm-simultaneous) Creating 3 threads to sleep 5 times each.
+  (alarm-simultaneous) Each thread sleeps 10 ticks each time.
+  (alarm-simultaneous) Within an iteration, all threads should wake up on the same tick.
+  (alarm-simultaneous) iteration 0, thread 0: woke up after 10 ticks
+  (alarm-simultaneous) iteration 0, thread 1: woke up 0 ticks later
+  (alarm-simultaneous) iteration 0, thread 2: woke up 0 ticks later
+  (alarm-simultaneous) iteration 1, thread 0: woke up 10 ticks later
+  (alarm-simultaneous) iteration 1, thread 1: woke up 0 ticks later
+  (alarm-simultaneous) iteration 1, thread 2: woke up 0 ticks later
+  (alarm-simultaneous) iteration 2, thread 0: woke up 10 ticks later
+  (alarm-simultaneous) iteration 2, thread 1: woke up 0 ticks later
+  (alarm-simultaneous) iteration 2, thread 2: woke up 0 ticks later
+  (alarm-simultaneous) iteration 3, thread 0: woke up 10 ticks later
+  (alarm-simultaneous) iteration 3, thread 1: woke up 0 ticks later
+  (alarm-simultaneous) iteration 3, thread 2: woke up 0 ticks later
+  (alarm-simultaneous) iteration 4, thread 0: woke up 10 ticks later
+  (alarm-simultaneous) iteration 4, thread 1: woke up 0 ticks later
+  (alarm-simultaneous) iteration 4, thread 2: woke up 0 ticks later
+  (alarm-simultaneous) end
+Differences in `diff -u' format:
+  (alarm-simultaneous) begin
+  (alarm-simultaneous) Creating 3 threads to sleep 5 times each.
+  (alarm-simultaneous) Each thread sleeps 10 ticks each time.
+  (alarm-simultaneous) Within an iteration, all threads should wake up on the same tick.
+- (alarm-simultaneous) iteration 0, thread 0: woke up after 10 ticks
++ (alarm-simultaneous) iteration 0, thread 0: woke up after -12 ticks
+  (alarm-simultaneous) iteration 0, thread 1: woke up 0 ticks later
+  (alarm-simultaneous) iteration 0, thread 2: woke up 0 ticks later
+- (alarm-simultaneous) iteration 1, thread 0: woke up 10 ticks later
++ (alarm-simultaneous) iteration 1, thread 0: woke up 1 ticks later
+  (alarm-simultaneous) iteration 1, thread 1: woke up 0 ticks later
+  (alarm-simultaneous) iteration 1, thread 2: woke up 0 ticks later
+- (alarm-simultaneous) iteration 2, thread 0: woke up 10 ticks later
++ (alarm-simultaneous) iteration 2, thread 0: woke up 1 ticks later
+  (alarm-simultaneous) iteration 2, thread 1: woke up 0 ticks later
+  (alarm-simultaneous) iteration 2, thread 2: woke up 0 ticks later
+- (alarm-simultaneous) iteration 3, thread 0: woke up 10 ticks later
++ (alarm-simultaneous) iteration 3, thread 0: woke up 1 ticks later
+  (alarm-simultaneous) iteration 3, thread 1: woke up 0 ticks later
+  (alarm-simultaneous) iteration 3, thread 2: woke up 0 ticks later
+- (alarm-simultaneous) iteration 4, thread 0: woke up 10 ticks later
++ (alarm-simultaneous) iteration 4, thread 0: woke up 1 ticks later
+  (alarm-simultaneous) iteration 4, thread 1: woke up 0 ticks later
+  (alarm-simultaneous) iteration 4, thread 2: woke up 0 ticks later
+  (alarm-simultaneous) end
+pintos -v -k -T 60 --qemu  -- -q  run alarm-zero < /dev/null 2> tests/threads/alarm-zero.errors > tests/threads/alarm-zero.output
+perl -I../.. ../../tests/threads/alarm-zero.ck tests/threads/alarm-zero tests/threads/alarm-zero.result
+[32mpass tests/threads/alarm-zero
+[0mpintos -v -k -T 60 --qemu  -- -q  run alarm-negative < /dev/null 2> tests/threads/alarm-negative.errors > tests/threads/alarm-negative.output
+perl -I../.. ../../tests/threads/alarm-negative.ck tests/threads/alarm-negative tests/threads/alarm-negative.result
+[32mpass tests/threads/alarm-negative
+[0mmake: Leaving directory '/mnt/c/SO/Pint_Os/pintos/src/threads/build'
+[?2004h]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [?2004l
+exit
+
+Script done on 2026-09-19 23:59:26-03:00 [COMMAND_EXIT_CODE="0"]
