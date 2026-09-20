@@ -1,0 +1,79 @@
+Script started on 2026-09-19 20:50:54-03:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="148" LINES="13"]
+[?2004h]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ date
+[?2004lSat Sep 19 20:50:57 -03 2026
+[?2004h]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ whoami
+[?2004ljoao
+[?2004h]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ pwd
+[?2004l/mnt/c/SO/Pint_Os
+[?2004h]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [7mcd /mnt/c/SO/Pint_Os[27m
+[7msource env.sh[27m[A]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ cd /mnt/c/SO/Pint_Os
+source env.sh
+[?2004l[?2004h]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [7mwhich i386-elf-gcc[27m
+[7mi386-elf-gcc --version[27m
+[7mmake -C pintos/src/threads[27m[A[A]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ which i386-elf-gcc
+i386-elf-gcc --version
+make -C pintos/src/threads
+[?2004l/mnt/c/SO/Pint_Os/toolchain/x86_64/bin/i386-elf-gcc
+i386-elf-gcc (GCC) 6.2.0
+Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+make: Entering directory '/mnt/c/SO/Pint_Os/pintos/src/threads'
+cp ../Makefile.build build/Makefile
+cd build && make all
+make[1]: Entering directory '/mnt/c/SO/Pint_Os/pintos/src/threads/build'
+i386-elf-gcc -c ../../threads/init.c -o threads/init.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF threads/init.d
+i386-elf-gcc -c ../../tests/threads/tests.c -o tests/threads/tests.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/tests.d
+i386-elf-gcc -c ../../tests/threads/alarm-wait.c -o tests/threads/alarm-wait.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/alarm-wait.d
+i386-elf-gcc -c ../../tests/threads/alarm-simultaneous.c -o tests/threads/alarm-simultaneous.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/alarm-simultaneous.d
+i386-elf-gcc -c ../../tests/threads/alarm-priority.c -o tests/threads/alarm-priority.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/alarm-priority.d
+i386-elf-gcc -c ../../tests/threads/alarm-zero.c -o tests/threads/alarm-zero.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/alarm-zero.d
+i386-elf-gcc -c ../../tests/threads/alarm-negative.c -o tests/threads/alarm-negative.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/alarm-negative.d
+i386-elf-gcc -c ../../tests/threads/priority-change.c -o tests/threads/priority-change.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/priority-change.d
+i386-elf-gcc -c ../../tests/threads/priority-donate-one.c -o tests/threads/priority-donate-one.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/priority-donate-one.d
+i386-elf-gcc -c ../../tests/threads/priority-donate-multiple.c -o tests/threads/priority-donate-multiple.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/priority-donate-multiple.d
+i386-elf-gcc -c ../../tests/threads/priority-donate-multiple2.c -o tests/threads/priority-donate-multiple2.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/priority-donate-multiple2.d
+i386-elf-gcc -c ../../tests/threads/priority-donate-nest.c -o tests/threads/priority-donate-nest.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/priority-donate-nest.d
+i386-elf-gcc -c ../../tests/threads/priority-donate-sema.c -o tests/threads/priority-donate-sema.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/priority-donate-sema.d
+i386-elf-gcc -c ../../tests/threads/priority-donate-lower.c -o tests/threads/priority-donate-lower.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/priority-donate-lower.d
+i386-elf-gcc -c ../../tests/threads/priority-fifo.c -o tests/threads/priority-fifo.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/priority-fifo.d
+i386-elf-gcc -c ../../tests/threads/priority-preempt.c -o tests/threads/priority-preempt.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/priority-preempt.d
+i386-elf-gcc -c ../../tests/threads/priority-sema.c -o tests/threads/priority-sema.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/priority-sema.d
+i386-elf-gcc -c ../../tests/threads/priority-condvar.c -o tests/threads/priority-condvar.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/priority-condvar.d
+i386-elf-gcc -c ../../tests/threads/priority-donate-chain.c -o tests/threads/priority-donate-chain.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/priority-donate-chain.d
+i386-elf-gcc -c ../../tests/threads/mlfqs-load-1.c -o tests/threads/mlfqs-load-1.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/mlfqs-load-1.d
+i386-elf-gcc -c ../../tests/threads/mlfqs-load-60.c -o tests/threads/mlfqs-load-60.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/mlfqs-load-60.d
+i386-elf-gcc -c ../../tests/threads/mlfqs-load-avg.c -o tests/threads/mlfqs-load-avg.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/mlfqs-load-avg.d
+i386-elf-gcc -c ../../tests/threads/mlfqs-recent-1.c -o tests/threads/mlfqs-recent-1.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/mlfqs-recent-1.d
+i386-elf-gcc -c ../../tests/threads/mlfqs-fair.c -o tests/threads/mlfqs-fair.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/mlfqs-fair.d
+i386-elf-gcc -c ../../tests/threads/mlfqs-block.c -o tests/threads/mlfqs-block.o -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel -Wall -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers  -MMD -MF tests/threads/mlfqs-block.d
+i386-elf-ld -melf_i386 -T threads/kernel.lds.s -o kernel.o threads/start.o threads/init.o threads/thread.o threads/switch.o threads/interrupt.o threads/intr-stubs.o threads/synch.o threads/palloc.o threads/malloc.o devices/pit.o devices/timer.o devices/kbd.o devices/vga.o devices/serial.o devices/block.o devices/partition.o devices/ide.o devices/input.o devices/intq.o devices/rtc.o devices/shutdown.o devices/speaker.o lib/debug.o lib/random.o lib/stdio.o lib/stdlib.o lib/string.o lib/arithmetic.o lib/ustar.o lib/kernel/debug.o lib/kernel/list.o lib/kernel/bitmap.o lib/kernel/hash.o lib/kernel/console.o tests/threads/tests.o tests/threads/alarm-wait.o tests/threads/alarm-simultaneous.o tests/threads/alarm-priority.o tests/threads/alarm-zero.o tests/threads/alarm-negative.o tests/threads/priority-change.o tests/threads/priority-donate-one.o tests/threads/priority-donate-multiple.o tests/threads/priority-donate-multiple2.o tests/threads/priority-donate-nest.o tests/threads/priority-donate-sema.o tests/threads/priority-donate-lower.o tests/threads/priority-fifo.o tests/threads/priority-preempt.o tests/threads/priority-sema.o tests/threads/priority-condvar.o tests/threads/priority-donate-chain.o tests/threads/mlfqs-load-1.o tests/threads/mlfqs-load-60.o tests/threads/mlfqs-load-avg.o tests/threads/mlfqs-recent-1.o tests/threads/mlfqs-fair.o tests/threads/mlfqs-block.o
+i386-elf-objdump -S kernel.o > kernel.asm
+i386-elf-nm -n kernel.o > kernel.sym
+i386-elf-objcopy -R .note -R .comment -S kernel.o kernel.bin
+make[1]: Leaving directory '/mnt/c/SO/Pint_Os/pintos/src/threads/build'
+make: Leaving directory '/mnt/c/SO/Pint_Os/pintos/src/threads'
+[?2004h]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [7mcd /mnt/c/SO/Pint_Os[27m
+[7msource env.sh[27m
+[7mmake -C pintos/src/threads/build tests/threads/alarm-single.result[27m
+[7mcat pintos/src/threads/build/tests/threads/alarm-single.result[27m[A[A[Acd /mnt/c/SO/Pint_Os
+source env.sh
+make -C pintos/src/threads/build tests/threads/alarm-single.result
+cat pintos/src/threads/build/tests/threads/alarm-single.result
+[?2004lmake: Entering directory '/mnt/c/SO/Pint_Os/pintos/src/threads/build'
+pintos -v -k -T 60 --qemu  -- -q  run alarm-single < /dev/null 2> tests/threads/alarm-single.errors > tests/threads/alarm-single.output
+perl -I../.. ../../tests/threads/alarm-single.ck tests/threads/alarm-single tests/threads/alarm-single.result
+[32mpass tests/threads/alarm-single
+[0mmake: Leaving directory '/mnt/c/SO/Pint_Os/pintos/src/threads/build'
+PASS
+[?2004h]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;32mjoao@LaptopJoaoM[00m:[01;34m/mnt/c/SO/Pint_Os[00m$ [7msed -n '/^timer_sleep (/,/^}/p' pintos/src/devices/timer.c[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csed -n '/^timer_sleep (/,/^}/p' pintos/src/devices/timer.c
+[?2004ltimer_sleep (int64_t ticks) 
+{
+  int64_t start = timer_ticks ();
+
+  ASSERT (intr_get_level () == INTR_ON);
+  while (timer_elapsed (start) < ticks) 
+    thread_yield ();
+}
+[?2004h]0;joao@LaptopJoaoM: /mnt/c/SO/Pint_Os[01;
